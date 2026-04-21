@@ -11,6 +11,13 @@ def subtract(a,b):
         print(f"error while subtracting: {e}")
     except TypeError as e:
         print(f"error while subtracting: {e}")
+def multiply(a,b):
+    try:
+        return a * b
+    except Exception as e:
+        print(f"error while multiplying: {e}")
+    except TypeError as e:
+        print(f"error while multiplying: {e}")
 
 if __name__ == '__main__':
     print(add(2,3))
