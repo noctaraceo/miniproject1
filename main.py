@@ -28,6 +28,17 @@ def divide(a,b):
     except ZeroDivisionError as e:
         print(f"error while dividing: {e}")
 if __name__ == '__main__':
-    print(add(2,3))
-    print(subtract(8,67))
-    print(subtract("hello", 5))
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    char = input("Enter operating symbol: ")
+
+    if char == '+':
+        print(add(a, b))
+    elif char == '-':
+        print(subtract(a, b))
+    elif char == '*':
+        print(multiply(a, b))
+    elif char == '/':
+        print(divide(a, b))
+    else:
+        print("Invalid operator")
