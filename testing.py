@@ -18,5 +18,14 @@ class TestMain(unittest.TestCase):
     def test_add_type_error(self):
         with self.assertRaises(TypeError):
             main.add("hello", 5)
+    def test_divide(self):
+        self.assertEqual(main.divide(10, 2), 5)
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            main.divide(10, 0)
+    def test_divide_type_error(self):
+        with self.assertRaises(TypeError):
+            main.divide("hello", 5)
+    
 if __name__ == '__main__': 
     unittest.main()
